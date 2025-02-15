@@ -14,7 +14,7 @@ A modern, sleek personal brand website built with React, TypeScript, and Supabas
 
 ### UI/UX Improvements
 - [ ] Update color scheme:
-  - Replace current blue-red gradient with sleek blue-purple
+  - Replace current blue-red gradient with sleek blue/purple
   - Take inspiration from Supabase's dark theme
   - Remove mixed color combinations
   - Use consistent accent colors throughout
