@@ -1,15 +1,16 @@
 export type ServiceType =
-  | 'standard_review'
-  | 'express_review'
-  | 'video_call_review'
-  | 'express_video_call_review'
-  | 'additional_review'
-  | 'consultation_30'
-  | 'consultation_60'
-  | 'single_question';
+  | "standard_review"
+  | "express_review"
+  | "video_call_review"
+  | "express_video_call_review"
+  | "additional_review"
+  | "consultation_30"
+  | "consultation_60"
+  | "single_question";
 
 export interface Service {
-  id: ServiceType;
+  id: string;
+  uuid: string; // Add this new field
   title: string;
   price: number;
   details: string[];

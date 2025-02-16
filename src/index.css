@@ -11,9 +11,47 @@ html {
 }
 
 body {
-  @apply bg-[#1C1C1C] text-gray-300;
+  background-color: theme("colors.background");
+  color: theme("colors.text");
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-red-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    to right,
+    theme("colors.primary"),
+    theme("colors.secondary")
+  );
+}
+
+/* Supabase-inspired components */
+.card {
+  @apply bg-card rounded-lg border border-surface p-6 hover:border-accent transition-all;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-2 rounded-md hover:bg-[#2563eb] transition-colors;
+}
+
+.accent-border {
+  @apply border-2 border-accent rounded-lg;
+}
+
+@keyframes gradient-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-gradient-rotate {
+  animation: gradient-rotate 8s linear infinite;
+}
+
+/* Smooth scroll reveal */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
